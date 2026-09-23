@@ -27,6 +27,7 @@ html_theme = "furo"
 html_title = "Atlas scientifique"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
+html_favicon = "_static/favicon.svg"
 html_search_language = "fr"
 html_show_sourcelink = True
 html_copy_source = True
