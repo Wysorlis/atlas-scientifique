@@ -1,0 +1,162 @@
+:root {
+  --atlas-accent: #2563eb;
+  --atlas-soft: color-mix(in srgb, var(--atlas-accent) 10%, transparent);
+}
+
+.content {
+  line-height: 1.7;
+}
+
+.note-meta {
+  background: var(--atlas-soft);
+  border-left: 4px solid var(--atlas-accent);
+  border-radius: 0.35rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.8rem 1rem;
+}
+
+.note-meta p {
+  margin: 0.25rem 0;
+}
+
+.knowledge-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 1.2rem 0;
+}
+
+.knowledge-card {
+  border: 1px solid var(--color-background-border);
+  border-radius: 0.6rem;
+  padding: 0.9rem 1rem;
+}
+
+.knowledge-card strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.search-hint {
+  border: 1px dashed var(--color-background-border);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+}
+
+.backlinks {
+  margin-top: 3rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-background-border);
+}
+
+.backlinks > p {
+  color: var(--color-foreground-muted);
+}
+
+.backlinks .rubric {
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.backlinks ul {
+  margin-top: 0.25rem;
+}
+
+/* Explorateur à deux niveaux de la page « Toutes les connaissances ». */
+.knowledge-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.knowledge-entry {
+  align-items: center;
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-background-border);
+  border-radius: 0.55rem;
+  color: var(--color-foreground-primary);
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  text-decoration: none;
+}
+
+.knowledge-entry:hover {
+  border-color: var(--atlas-accent);
+  text-decoration: none;
+}
+
+.knowledge-entry strong,
+.knowledge-entry small,
+.knowledge-collection summary strong,
+.knowledge-collection summary small {
+  display: block;
+}
+
+.knowledge-entry small,
+.knowledge-collection summary small {
+  color: var(--color-foreground-muted);
+  font-size: 0.78rem;
+  margin-top: 0.1rem;
+}
+
+.knowledge-entry__icon {
+  flex: 0 0 1.5rem;
+  font-size: 1.15rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.knowledge-collection {
+  border: 1px solid var(--color-background-border);
+  border-left: 4px solid var(--atlas-accent);
+  border-radius: 0.6rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+.knowledge-collection > summary {
+  align-items: center;
+  background: var(--atlas-soft);
+  cursor: pointer;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+}
+
+.knowledge-collection > summary::marker {
+  color: var(--atlas-accent);
+}
+
+.knowledge-collection__content {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem 1rem 2rem;
+}
+
+.knowledge-collection__home {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.knowledge-entry--child {
+  background: transparent;
+}
+
+/* Dans la barre latérale, un dossier et une fiche ne se confondent plus. */
+.sidebar-tree li.toctree-l2 > a::before,
+.sidebar-tree li.toctree-l3 > a::before {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 0.35rem;
+  width: 1rem;
+}
+
+.sidebar-tree li.toctree-l2:not(.has-children) > a::before,
+.sidebar-tree li.toctree-l3:not(.has-children) > a::before {
+  content: "📄";
+}
+
+.sidebar-tree li.has-children > a::before {
+  content: "📁";
+}

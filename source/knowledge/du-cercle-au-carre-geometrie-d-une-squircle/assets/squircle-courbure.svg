@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" role="img" aria-labelledby="title desc">
+  <title id="title">Cercle, squircle et cercle osculateur dans un carré unité</title>
+  <desc id="desc">Dans le premier quadrant, un quart de cercle et un quart de squircle sont comparés au carré unité. Le point diagonal de la squircle et son cercle osculateur sont indiqués.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#65758a"/>
+    </marker>
+    <style>
+      .axis { stroke: #65758a; stroke-width: 2; marker-end: url(#arrow); }
+      .square { fill: #eef3f8; fill-opacity: .45; stroke: #7c8795; stroke-width: 2; }
+      .circle { fill: none; stroke: #4777a7; stroke-width: 3; stroke-dasharray: 8 6; }
+      .squircle { fill: none; stroke: #b34f4f; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .osculating { fill: #e9b96e; fill-opacity: .18; stroke: #d08732; stroke-width: 2.5; }
+      .diagonal { stroke: #8b6aa8; stroke-width: 2; stroke-dasharray: 5 5; }
+      .radius { stroke: #d08732; stroke-width: 2; }
+      .point { fill: #b34f4f; stroke: white; stroke-width: 2; }
+      .centre { fill: #d08732; stroke: white; stroke-width: 2; }
+      .label { font: 16px system-ui, sans-serif; fill: #263442; }
+      .small { font: 14px system-ui, sans-serif; fill: #566575; }
+      .math { font: italic 18px Georgia, serif; fill: #263442; }
+    </style>
+  </defs>
+  <rect class="square" x="100" y="140" width="330" height="330"/>
+  <line class="axis" x1="80" y1="470" x2="520" y2="470"/>
+  <line class="axis" x1="100" y1="490" x2="100" y2="70"/>
+  <text class="math" x="530" y="477">x</text>
+  <text class="math" x="90" y="60">y</text>
+  <text class="small" x="83" y="493">O</text>
+  <text class="small" x="420" y="493">1</text>
+  <text class="small" x="78" y="146">1</text>
+  <path class="circle" d="M100 140 A330 330 0 0 1 430 470"/>
+  <path class="squircle" d="M100 140 L116.5 140 L133 140 L149.5 140 L166 140.1 L182.5 140.3 L199 140.7 L215.5 141.2 L232 142.1 L248.5 143.4 L265 145.3 L281.5 147.8 L298 151.3 L314.5 155.8 L331 161.9 L347.5 169.9 L364 180.7 L377.5 192.5 L380.5 195.6 L397 217.3 L413.5 253.4 L430 470"/>
+  <line class="diagonal" x1="100" y1="470" x2="430" y2="140"/>
+  <circle class="osculating" cx="285" cy="285" r="131"/>
+  <line class="radius" x1="285" y1="285" x2="377.5" y2="192.5"/>
+  <circle class="point" cx="377.5" cy="192.5" r="6"/>
+  <circle class="centre" cx="285" cy="285" r="5"/>
+  <text class="math" x="388" y="184">P</text>
+  <text class="math" x="267" y="307">C</text>
+  <text class="small" x="317" y="245">Rₘᵢₙ</text>
+  <line x1="538" y1="150" x2="588" y2="150" class="squircle"/>
+  <text class="label" x="600" y="156">squircle</text>
+  <line x1="538" y1="190" x2="588" y2="190" class="circle"/>
+  <text class="label" x="600" y="196">cercle unité</text>
+  <circle class="osculating" cx="563" cy="230" r="18"/>
+  <text class="label" x="600" y="236">cercle osculateur</text>
+  <text class="small" x="505" y="330">Sur la diagonale :</text>
+  <text class="small" x="505" y="357">cercle ≈ 70,7 %</text>
+  <text class="small" x="505" y="384">squircle ≈ 84,1 %</text>
+  <text class="small" x="505" y="411">coin du carré = 100 %</text>
+</svg>

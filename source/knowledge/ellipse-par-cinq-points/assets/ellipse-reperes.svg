@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" role="img" aria-labelledby="title desc">
+  <title id="title">Ellipse passant par cinq points et ses deux repères</title>
+  <desc id="desc">Une ellipse inclinée porte cinq points. Les axes globaux x et y partent de l'origine, tandis que les axes principaux xi et eta passent par le centre de l'ellipse.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#456a93"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a44747"/>
+    </marker>
+    <style>
+      .global { stroke: #456a93; stroke-width: 2.3; fill: none; marker-end: url(#arrow-blue); }
+      .principal { stroke: #a44747; stroke-width: 2.3; fill: none; marker-end: url(#arrow-red); }
+      .guide { stroke: #9aa7b5; stroke-width: 1.3; stroke-dasharray: 6 6; fill: none; }
+      .ellipse { stroke: #243d5a; stroke-width: 3.2; fill: #dfeaf5; fill-opacity: .72; }
+      .point { fill: #f4a340; stroke: #784b12; stroke-width: 1.5; }
+      .centre { fill: #a44747; }
+      .label { font: 17px system-ui, sans-serif; fill: #24303d; }
+      .axis-blue { font: italic 19px Georgia, serif; fill: #365b84; }
+      .axis-red { font: italic 19px Georgia, serif; fill: #913737; }
+      .caption { font: 15px system-ui, sans-serif; fill: #56616d; }
+    </style>
+  </defs>
+
+  <line class="global" x1="80" y1="360" x2="700" y2="360"/>
+  <line class="global" x1="80" y1="360" x2="80" y2="55"/>
+  <text class="axis-blue" x="708" y="367">x</text>
+  <text class="axis-blue" x="67" y="47">y</text>
+  <text class="caption" x="58" y="385">origine</text>
+
+  <g transform="translate(400 220) rotate(-25)">
+    <ellipse class="ellipse" cx="0" cy="0" rx="220" ry="105"/>
+    <line class="guide" x1="-258" y1="0" x2="258" y2="0"/>
+    <line class="guide" x1="0" y1="-145" x2="0" y2="145"/>
+  </g>
+
+  <line class="principal" x1="400" y1="220" x2="636" y2="110"/>
+  <line class="principal" x1="400" y1="220" x2="485" y2="402"/>
+  <text class="axis-red" x="647" y="106">ξ</text>
+  <text class="axis-red" x="493" y="412">η</text>
+
+  <path d="M 494 360 A 98 98 0 0 0 482 319" stroke="#6c7782" stroke-width="1.8" fill="none"/>
+  <text class="label" x="500" y="330">θ</text>
+
+  <circle class="centre" cx="400" cy="220" r="5"/>
+  <text class="label" x="411" y="214">O = (x₀, y₀)</text>
+
+  <circle class="point" cx="207" cy="249" r="6"/>
+  <text class="label" x="178" y="241">P₁</text>
+  <circle class="point" cx="286" cy="120" r="6"/>
+  <text class="label" x="257" y="110">P₂</text>
+  <circle class="point" cx="451" cy="99" r="6"/>
+  <text class="label" x="459" y="93">P₃</text>
+  <circle class="point" cx="594" cy="193" r="6"/>
+  <text class="label" x="606" y="190">P₄</text>
+  <circle class="point" cx="516" cy="318" r="6"/>
+  <text class="label" x="526" y="326">P₅</text>
+
+  <text class="caption" x="214" y="424">repère global (x, y)</text>
+  <text class="caption" x="475" y="58">repère principal (ξ, η)</text>
+</svg>

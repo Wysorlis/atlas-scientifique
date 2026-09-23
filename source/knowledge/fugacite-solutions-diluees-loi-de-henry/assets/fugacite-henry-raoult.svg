@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" role="img" aria-labelledby="title desc">
+  <title id="title">Fugacité en fonction de la composition</title>
+  <desc id="desc">La fugacité réelle d'un constituant est comparée à la tangente de Henry à dilution infinie et à la référence de Lewis–Randall près du corps pur.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#596777"/>
+    </marker>
+    <style>
+      .axis { stroke: #596777; stroke-width: 2.2; marker-end: url(#arrow); }
+      .curve { fill: none; stroke: #245f8d; stroke-width: 4; }
+      .henry { fill: none; stroke: #b44f49; stroke-width: 2.8; stroke-dasharray: 9 6; }
+      .raoult { fill: none; stroke: #4b8b61; stroke-width: 2.8; stroke-dasharray: 4 5; }
+      .guide { stroke: #8794a2; stroke-width: 1.4; stroke-dasharray: 5 5; }
+      .point { fill: #245f8d; }
+      .label { font: 17px system-ui, sans-serif; fill: #263442; }
+      .small { font: 14px system-ui, sans-serif; fill: #536171; }
+      .math { font: italic 19px Georgia, serif; fill: #263442; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="780" height="500" rx="14" fill="#f7f9fc"/>
+  <line class="axis" x1="90" y1="415" x2="700" y2="415"/>
+  <line class="axis" x1="90" y1="415" x2="90" y2="55"/>
+  <text class="math" x="708" y="422">xᵢ</text>
+  <text class="math" x="65" y="48">fᵢᴸ</text>
+  <text class="small" x="76" y="440">0</text>
+  <text class="small" x="675" y="440">1</text>
+  <line class="guide" x1="680" y1="415" x2="680" y2="125"/>
+  <line class="guide" x1="90" y1="125" x2="680" y2="125"/>
+  <circle class="point" cx="680" cy="125" r="5"/>
+  <text class="math" x="694" y="126">fᵢᴸ,*</text>
+  <path class="curve" d="M90 415 C185 300, 330 214, 470 170 C555 143, 620 154, 680 125"/>
+  <line class="henry" x1="90" y1="415" x2="330" y2="125"/>
+  <line class="raoult" x1="90" y1="415" x2="680" y2="125"/>
+  <text class="label" x="130" y="245">tangente de Henry</text>
+  <text class="math" x="142" y="271">fᵢᴸ ≃ Hᵢ,ₛ xᵢ</text>
+  <text class="label" x="455" y="330">référence de Lewis–Randall</text>
+  <text class="math" x="500" y="355">fᵢᴸ ≃ fᵢᴸ,* xᵢ</text>
+  <text class="label" x="400" y="105">fugacité réelle</text>
+  <text class="small" x="108" y="465">dilution infinie</text>
+  <text class="small" x="570" y="465">corps pur</text>
+</svg>

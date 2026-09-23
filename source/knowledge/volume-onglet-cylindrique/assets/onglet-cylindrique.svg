@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 510" role="img" aria-labelledby="title desc">
+  <title id="title">Géométrie d’un onglet cylindrique</title>
+  <desc id="desc">À gauche, un cylindre coupé par un plan oblique. À droite, le domaine triangulaire reliant y et la hauteur eta.</desc>
+  <defs>
+    <linearGradient id="solid" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity=".18"/>
+    </linearGradient>
+    <linearGradient id="cut" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity=".52"/>
+      <stop offset="1" stop-color="#f97316" stop-opacity=".22"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="510" rx="22" fill="#f8fafc"/>
+  <text x="245" y="42" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#0f172a">Le solide</text>
+  <text x="752" y="42" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#0f172a">Les bornes couplées</text>
+
+  <!-- pseudo-3D cylindrical wedge -->
+  <path d="M95 365 C95 310 160 276 245 276 C330 276 395 310 395 365 L395 177 C395 132 330 104 245 104 C160 104 95 132 95 177 Z" fill="url(#solid)" stroke="#2563eb" stroke-width="3"/>
+  <ellipse cx="245" cy="177" rx="150" ry="73" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <path d="M95 365 C95 310 160 276 245 276 C330 276 395 310 395 365 C395 413 330 443 245 443 C160 443 95 413 95 365 Z" fill="url(#cut)" stroke="#ea580c" stroke-width="3"/>
+  <path d="M95 365 C160 330 330 267 395 177" fill="none" stroke="#ea580c" stroke-width="4"/>
+  <path d="M95 365 C160 400 330 400 395 365" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="8 7"/>
+  <line x1="245" y1="365" x2="395" y2="365" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="325" y="392" font-family="serif" font-size="23" fill="#0f172a">y</text>
+  <line x1="395" y1="365" x2="395" y2="177" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="407" y="270" font-family="serif" font-size="23" fill="#0f172a">η = y tan θ</text>
+  <path d="M337 365 A58 58 0 0 0 372 320" fill="none" stroke="#334155" stroke-width="2"/>
+  <text x="345" y="345" font-family="serif" font-size="22" fill="#0f172a">θ</text>
+
+  <!-- triangular y/eta domain -->
+  <line x1="560" y1="430" x2="930" y2="430" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="590" y1="460" x2="590" y2="85" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M590 430 L895 430 L895 130 Z" fill="#fdba74" fill-opacity=".48" stroke="#ea580c" stroke-width="3"/>
+  <line x1="590" y1="430" x2="895" y2="130" stroke="#ea580c" stroke-width="4"/>
+  <line x1="895" y1="430" x2="895" y2="130" stroke="#64748b" stroke-width="2" stroke-dasharray="8 7"/>
+  <text x="938" y="438" font-family="serif" font-size="23" fill="#0f172a">y</text>
+  <text x="568" y="82" font-family="serif" font-size="23" fill="#0f172a">η</text>
+  <text x="895" y="458" text-anchor="middle" font-family="serif" font-size="22" fill="#0f172a">R</text>
+  <text x="875" y="112" text-anchor="end" font-family="serif" font-size="21" fill="#0f172a">R tan θ</text>
+  <text x="721" y="245" transform="rotate(-44 721 245)" font-family="serif" font-size="22" fill="#9a3412">η = y tan θ</text>
+  <text x="750" y="380" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#7c2d12">0 ≤ η ≤ y tan θ</text>
+  <text x="500" y="486" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#475569">La hauteur varie avec y : le domaine est triangulaire, pas rectangulaire.</text>
+</svg>

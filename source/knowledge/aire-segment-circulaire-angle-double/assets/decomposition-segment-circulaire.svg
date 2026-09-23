@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Décomposition d’un grand segment circulaire</title>
+  <desc id="desc">Un cercle de rayon R est coupé par une corde de longueur l. La région sous la corde est la somme d’un grand secteur S1 et d’un triangle isocèle S2.</desc>
+  <defs>
+    <style>
+      .outline { fill: none; stroke: #243447; stroke-width: 4; }
+      .guide { fill: none; stroke: #64748b; stroke-width: 2.5; stroke-dasharray: 9 7; }
+      .measure { fill: none; stroke: #2563eb; stroke-width: 3; }
+      .sector { fill: #bfdbfe; fill-opacity: .58; stroke: none; }
+      .triangle { fill: #fed7aa; fill-opacity: .88; stroke: #c2410c; stroke-width: 2.5; }
+      .label { fill: #172033; font: 25px sans-serif; }
+      .small { fill: #334155; font: 21px sans-serif; }
+      .region { fill: #172033; font: 700 28px sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Grand secteur d’angle 2(pi-alpha). -->
+  <path class="sector" d="M450 330 L260.3 200 A230 230 0 1 0 639.7 200 Z"/>
+  <!-- Triangle entre la corde et le centre. -->
+  <path class="triangle" d="M260.3 200 L639.7 200 L450 330 Z"/>
+
+  <circle class="outline" cx="450" cy="330" r="230"/>
+  <line class="outline" x1="260.3" y1="200" x2="639.7" y2="200"/>
+  <line class="outline" x1="450" y1="330" x2="260.3" y2="200"/>
+  <line class="outline" x1="450" y1="330" x2="639.7" y2="200"/>
+  <line class="guide" x1="450" y1="330" x2="450" y2="200"/>
+  <path class="outline" d="M450 220 h20 v-20" stroke-width="2.5"/>
+  <circle cx="450" cy="330" r="5" fill="#243447"/>
+
+  <!-- Rayon R. -->
+  <line class="measure" x1="450" y1="330" x2="680" y2="330" marker-end="url(#arrow)"/>
+  <text class="label" x="560" y="315">R</text>
+
+  <!-- Longueur de corde l. -->
+  <line class="measure" x1="267" y1="168" x2="633" y2="168" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="label" x="445" y="151">ℓ</text>
+
+  <!-- Hauteur h. -->
+  <line class="measure" x1="475" y1="205" x2="475" y2="325" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text class="label" x="490" y="272">h</text>
+
+  <!-- Demi-angle alpha. -->
+  <path class="measure" d="M450 283 A47 47 0 0 0 411.3 303.4"/>
+  <text class="label" x="400" y="270">α</text>
+
+  <text class="region" x="690" y="445">S₁</text>
+  <text class="small" x="666" y="474">grand secteur</text>
+  <text class="region" x="440" y="245">S₂</text>
+  <text class="small" x="382" y="115">corde</text>
+</svg>
+

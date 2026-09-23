@@ -1,0 +1,12 @@
+# Sorties de compilation Sphinx
+build/
+
+# Fichiers temporaires locaux
+.tmp_integrales/
+dirty_notes/
+__pycache__/
+*.py[cod]
+
+# Fichiers propres aux systèmes d’exploitation
+.DS_Store
+Thumbs.db
