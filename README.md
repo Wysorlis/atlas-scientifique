@@ -1,4 +1,4 @@
-# Atlas scientifique
+# Nabla
 
 Ce dépôt contient une bibliothèque personnelle de connaissances scientifiques
 reconstruites à partir de notes manuscrites. Sphinx génère un site HTML statique

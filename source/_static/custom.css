@@ -1,6 +1,6 @@
 :root {
-  --atlas-accent: #2563eb;
-  --atlas-soft: color-mix(in srgb, var(--atlas-accent) 10%, transparent);
+  --nabla-accent: #2563eb;
+  --nabla-soft: color-mix(in srgb, var(--nabla-accent) 10%, transparent);
 }
 
 .content {
@@ -8,8 +8,8 @@
 }
 
 .note-meta {
-  background: var(--atlas-soft);
-  border-left: 4px solid var(--atlas-accent);
+  background: var(--nabla-soft);
+  border-left: 4px solid var(--nabla-accent);
   border-radius: 0.35rem;
   margin: 1rem 0 1.5rem;
   padding: 0.8rem 1rem;
@@ -82,7 +82,7 @@
 }
 
 .knowledge-entry:hover {
-  border-color: var(--atlas-accent);
+  border-color: var(--nabla-accent);
   text-decoration: none;
 }
 
@@ -109,7 +109,7 @@
 
 .knowledge-collection {
   border: 1px solid var(--color-background-border);
-  border-left: 4px solid var(--atlas-accent);
+  border-left: 4px solid var(--nabla-accent);
   border-radius: 0.6rem;
   margin: 0;
   overflow: hidden;
@@ -117,7 +117,7 @@
 
 .knowledge-collection > summary {
   align-items: center;
-  background: var(--atlas-soft);
+  background: var(--nabla-soft);
   cursor: pointer;
   display: flex;
   gap: 0.75rem;
@@ -125,7 +125,7 @@
 }
 
 .knowledge-collection > summary::marker {
-  color: var(--atlas-accent);
+  color: var(--nabla-accent);
 }
 
 .knowledge-collection__content {

@@ -1,4 +1,4 @@
-# Atlas scientifique
+# Nabla
 
 Une bibliothèque personnelle de notes scientifiques reconstruites, vérifiées
 et reliées entre elles.
